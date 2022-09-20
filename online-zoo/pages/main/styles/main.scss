@@ -12,7 +12,6 @@ html {
   margin: 0;    
   padding: 0;
   border: unset;
-  color: white;
 }
 
 a {
@@ -28,9 +27,92 @@ ul{
 }
 
 .wrapper {
-  width: 100%;
-  max-width: 1160px;
-  /* padding: 0 40px; */
-  margin: 0 auto;
+    width: 100%;
+    max-width: 1160px;
+    /* padding: 0 40px; */
+    margin: 0 auto;
+  }
+
+header {
+  background-color: black;
+  height: 80px;
+
+  .wrapper {
+    @include flex(row, space-between);
+    height: 80px;
+    color: white;
+  }
+
+  .logo {
+    // position: relative;
+    width: 82px;
+    height: 52px;    
+    margin-right: 63px;
+    border: 1px solid white;
+    border-radius: 2px;
+
+    h1 {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 19.01px;
+      line-height: 22.82px;
+      text-align: center;
+      color: white;
+    }
+
+    .bamboo {
+      position: relative;
+      left: 10px;
+      bottom: 25px;
+    }
+  } 
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    width: 40.5%;
+    height: 100%;
+    margin-left: -440px;
+
+    .menu {
+      @include flex(row, space-between);
+      width: 100%;
+    }
+
+    .menu__item{
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22.4px;   
+      color: white;
+
+      &:hover {
+        @include menu-hover;
+      }
+    }
+
+    .menu__item_active {
+      color: $orange;
+
+      &:hover {
+        cursor: default;
+        color: $orange;
+      }
+    }
+  }
+
+  .designed {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;   
+    color: white;
+
+    &:hover {
+      @include menu-hover;
+    }
+  }
 }
+
 

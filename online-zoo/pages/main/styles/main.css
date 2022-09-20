@@ -12,7 +12,6 @@ html {
   margin: 0;
   padding: 0;
   border: unset;
-  color: white;
 }
 
 a {
@@ -32,5 +31,116 @@ ul {
   max-width: 1160px;
   /* padding: 0 40px; */
   margin: 0 auto;
+}
+
+header {
+  background-color: black;
+  height: 80px;
+}
+
+header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  color: white;
+}
+
+header .logo {
+  width: 82px;
+  height: 52px;
+  margin-right: 63px;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
+header .logo h1 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19.01px;
+  line-height: 22.82px;
+  text-align: center;
+  color: white;
+}
+
+header .logo .bamboo {
+  position: relative;
+  left: 10px;
+  bottom: 25px;
+}
+
+header .header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40.5%;
+  height: 100%;
+  margin-left: -440px;
+}
+
+header .header-nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+header .header-nav .menu__item {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22.4px;
+  color: white;
+}
+
+header .header-nav .menu__item:hover {
+  cursor: pointer;
+  color: #FED290;
+}
+
+header .header-nav .menu__item_active {
+  color: #F9804B;
+}
+
+header .header-nav .menu__item_active:hover {
+  cursor: default;
+  color: #F9804B;
+}
+
+header .designed {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22.4px;
+  color: white;
+}
+
+header .designed:hover {
+  cursor: pointer;
+  color: #FED290;
 }
 /*# sourceMappingURL=main.css.map */

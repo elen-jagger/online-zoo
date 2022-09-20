@@ -6,23 +6,18 @@
 }
 
 @mixin paragraph {
-  font-family: 'Arial';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
+  // color: #000;
 }
 
 @mixin h3 {
-  font-family: 'Georgia';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 35px;
-  line-height: 130%;
-  letter-spacing: 0.06em;
-  color: $h3Color;
+  // color: #000;
 
   @media (max-width: 767px) {
-    font-size: 25px;
+    // color: #000;
   }
+}
+
+@mixin menu-hover {
+  cursor: pointer;
+  color: #FED290;
 }
