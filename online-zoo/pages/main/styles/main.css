@@ -33,6 +33,39 @@ ul {
   margin: 0 auto;
 }
 
+.txt-btn {
+  width: 298px;
+  height: 54px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #F9804B;
+  border-radius: 25px;
+}
+
+.txt-btn a {
+  color: white;
+}
+
+.txt-btn:hover {
+  cursor: pointer;
+  background-color: #E47209;
+}
+
+.txt-btnactive {
+  cursor: pointer;
+  background-color: #4B9200;
+}
+
+.txt-btn:disabled {
+  cursor: pointer;
+  background-color: #767474;
+}
+
 header {
   background-color: black;
   height: 80px;
@@ -142,5 +175,78 @@ header .designed {
 header .designed:hover {
   cursor: pointer;
   color: #FED290;
+}
+
+.watch {
+  height: 700px;
+  width: 100%;
+  background-image: url("../../../assets/images/panda.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.watch .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  padding: 86px 50px 100px 0;
+}
+
+.watch .watch-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 400px;
+  height: 100%;
+}
+
+.watch .watch-content p {
+  position: relative;
+  z-index: 0;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 106.5px;
+  line-height: 75%;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+.watch .watch-content p span {
+  color: #FFEE2E;
+}
+
+.watch .watch-content p:before {
+  position: absolute;
+  bottom: 10px;
+  right: 100px;
+  z-index: -1;
+  content: '';
+  width: 465px;
+  height: 465px;
+  background-color: #F9804B;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=main.css.map */
