@@ -27,10 +27,9 @@ ul{
 }
 
 .wrapper {
-    width: 100%;
-    max-width: 1160px;
-    /* padding: 0 40px; */
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
 .txt-btn {
@@ -72,6 +71,15 @@ h2 {
   font-weight: 400;
   font-size: 48px;
   line-height: 120%;
+  color: $black-blue;
+}
+
+h3 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 130%;
   color: $black-blue;
 }
 
@@ -409,5 +417,110 @@ header {
     position: absolute;
     bottom: 0;
     right: 0;
+  }
+}
+
+.feed {
+  padding: 69px 0 100px 0;
+  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  opacity: 0.9;
+
+  .wrapper {
+    @include flex(column, baseline);
+    position: relative;
+    height: 835px;
+    padding: 41px 0 59px 0;
+  }
+
+  .feed__wrapper-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 835px;
+    background: rgba(253, 253, 255, 0.52);
+    backdrop-filter: blur(2px);
+    opacity: 1;
+    border-radius: 20px;
+  }
+
+  h2 {
+    margin-bottom: 30px;
+    color: $orange-h2;
+  }
+
+  h4{
+    margin: 0 0 40px 99px;
+    align-self: baseline;
+  }
+
+  p {
+    margin: 0 0 10px 99px;
+    align-self: baseline;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: $black-blue;
+
+    &:nth-child(2n) {
+      font-weight: 500;
+    }
+
+    a {
+      color: $black-blue;
+      text-decoration: underline;
+      text-decoration-color: $orange-h2;
+      text-decoration-thickness: 1px;
+    }
+  }
+
+  h3 {
+    margin: 52px 0 40px 0;
+  }
+
+  .feed-cards-container {
+    display: grid;
+    grid-template-columns: 168px auto 168px auto 168px;    
+    width: 100%;
+    margin-bottom: 60px;
+    padding: 0 198px;
+  }
+
+  .feed-card {
+    width: 168px;
+    height: 244px;
+
+    p {
+      width: 100%;
+      height: 76px;
+      margin: unset;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: $black-blue;
+    }
+  }
+
+  .feed-card-img{
+    @include flex(column, center);
+    width: 168px;
+    height: 168px;
+    margin-bottom: 30px;
+    background-color: white;
+    border: 1px solid $orange;
+    border-radius: 5px;
+  }
+
+  .feed-arrow {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../assets/icons/feed-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 30px 60px;
   }
 }
