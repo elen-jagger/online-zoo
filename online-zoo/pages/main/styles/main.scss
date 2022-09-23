@@ -134,28 +134,29 @@ header {
   }
 
   .logo {
+    @include logo;
     // position: relative;
-    width: 82px;
-    height: 52px;    
-    margin-right: 63px;
-    border: 1px solid white;
-    border-radius: 2px;
+    // width: 82px;
+    // height: 52px;    
+    // margin-right: 63px;
+    // border: 1px solid white;
+    // border-radius: 2px;
 
-    h1 {
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 19.01px;
-      line-height: 22.82px;
-      text-align: center;
-      color: white;
-    }
+    // h1 {
+    //   font-family: 'Roboto';
+    //   font-style: normal;
+    //   font-weight: 400;
+    //   font-size: 19.01px;
+    //   line-height: 22.82px;
+    //   text-align: center;
+    //   color: white;
+    // }
 
-    .bamboo {
-      position: relative;
-      left: 10px;
-      bottom: 25px;
-    }
+    // .bamboo {
+    //   position: relative;
+    //   left: 10px;
+    //   bottom: 25px;
+    // }
   } 
 
   .header-nav {
@@ -166,8 +167,7 @@ header {
     margin-left: -440px;
 
     .menu {
-      @include flex(row, space-between);
-      width: 100%;
+      @include menu;
     }
 
     .menu__item{
@@ -200,7 +200,8 @@ header {
     color: white;
 
     &:hover {
-      @include menu-hover;
+      cursor: pointer;
+      color: $orange-hover;
     }
   }
 }
@@ -688,5 +689,199 @@ header {
     position: absolute;
     bottom: -133px;
     right: 0;
+  }
+}
+
+footer {
+  background-color: #111115;
+
+  .wrapper {
+    display: grid;
+    height: 443px;
+    padding: 40px 0 50px 0;
+    grid-template-areas: "logo subscribe subscribe"
+                         "donate-btn donate-btn donate-btn"
+                         "social footer-nav author";
+    grid-template-columns: 299px calc(100% - 667px) 368px;
+    grid-template-rows: 85px 1fr 135px;
+  }
+
+  .logo {
+    @include logo;
+    grid-area: logo;
+  }
+
+  .subscribe-form {
+    justify-self: flex-end;
+    @include flex(column, space-between);
+    align-items: flex-srart;
+    width: 368px;
+    height: 100%;
+    grid-area: subscribe;
+
+    .subscribe-form__field {
+      width: 100%;
+      @include flex(row, space-between);
+    }
+
+    h4 {
+      align-self: flex-start;
+      color: white;
+    }
+
+    .subscribe-form__email {
+      width: 228px;
+      height: 42px;
+      padding: 10px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: #BDBDBD;
+      border: 0.7px solid $orange;
+      border-radius: 2px;
+      background-color: #111115;
+
+      &:focus .submit-btn {
+        border: 1px solid $green;
+        color: $green;
+      }
+    }
+
+    .submit-btn {
+      width: 129px;
+      height: 42px;
+      border: 1px solid $black-blue;
+      border-radius: 5px;
+      background-color: $light-gray;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      color: black;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $orange;
+      }
+
+      &:active {
+        background-color: $light-gray;
+        border: 1px solid $green;
+        color: $green;
+      }
+
+      &:focus {
+        border: 1px solid $green;
+        color: $green;
+      }
+    }
+  }
+
+  .txt-btn {
+    align-self: center;
+    grid-area: donate-btn;
+    border-radius: 5px;
+  }
+
+  .socials-container {
+    grid-area: social;
+    width: 111px;
+    height: 134px;
+
+    ul {
+      width: 100%;
+      height: 100%;
+      @include flex(column, space-between);
+      align-items: srart;
+
+      .socials-container__item {
+        width: 100%;
+        @include flex(row, left);
+
+        &:hover .socials-ellipse {
+          cursor: pointer;
+          background: $orange-hover;
+        }
+
+        &:hover p {
+          cursor: pointer;
+          color: $orange-hover;
+        }
+
+        .socials-ellipse {
+          @include flex(column, space-around);
+          width: 26px;
+          height: 26px;
+          margin-right: 12px;
+          background: rgba(196, 196, 196, 0.5);
+          border-radius: 50%;
+        }
+
+        p {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 140%;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .footer-nav {
+    grid-area: footer-nav;
+    align-self: end;
+    justify-self: end;
+    width: 362px;
+    height: 22px;
+    margin-right: 30px;    
+    
+    .menu {
+      @include menu;
+    }
+
+    .menu__item {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: white;
+
+      &:hover {
+        @include menu-hover;
+      }
+    }
+
+    .menu__item_active {
+      color: $orange;
+
+      &:hover {
+        cursor: default;
+        color: $orange;
+      }
+    }
+  }
+
+  .author-data {
+    @include flex(column, space-between);
+    align-self: end;
+    justify-self: end;
+    grid-area: author;
+    width: 230px;
+    height: 51px;
+
+    p {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 100;
+      font-size: 16px;
+      line-height: 130%;
+      color: white;
+    }
   }
 }
