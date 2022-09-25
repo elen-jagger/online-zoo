@@ -1,0 +1,365 @@
+@import "./mixins";
+@import "./variables";
+
+html {
+  scroll-behavior: smooth;  
+}
+
+* {
+  box-sizing: border-box;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin: 0;    
+  padding: 0;
+  border: unset;
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input::-moz-range-thumb {
+  -webkit-appearance: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+.no-scroll {    
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.txt-btn {
+  width: 298px;
+  height: 54px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;  
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  border-radius: 25px;
+
+  a {
+    color: white;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: $orange-hover;
+  }
+
+  &:active {
+    cursor: pointer;
+    background: $green;
+  }
+
+  &:disabled {
+    cursor: pointer;
+    background: $gray;
+  }
+}
+
+h2 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
+  color: $black-blue;
+}
+
+h4 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  color: $black-blue;
+}
+
+header {
+  background-color: black;
+  height: 80px;
+
+  .wrapper {
+    @include flex(row, space-between);
+    height: 80px;
+    color: white;
+  }
+
+  .logo {
+    @include logo;
+  } 
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    width: 40.5%;
+    height: 100%;
+    margin-left: -440px;
+
+    .menu {
+      @include menu;
+    }
+
+    .menu__item{
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22.4px;   
+      color: white;
+
+      &:hover {
+        @include menu-hover;
+      }
+    }
+
+    .menu__item_active {
+      color: $orange;
+
+      &:hover {
+        cursor: default;
+        color: $orange;
+      }
+    }
+  }
+
+  .designed {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;   
+    color: white;
+
+    &:hover {
+      cursor: pointer;
+      color: $orange-hover;
+    }
+  }
+}
+
+main {
+  width: auto;
+  height: auto;
+  background-color: #F9804B;
+}
+
+.watch {  
+  height: 390px;
+  width: 100%;
+  background-image: url("../../../assets/images/panda.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+footer {
+  background-color: #111115;
+
+  .wrapper {
+    display: grid;
+    height: 443px;
+    padding: 40px 0 50px 0;
+    grid-template-areas: "logo subscribe subscribe"
+                         "donate-btn donate-btn donate-btn"
+                         "social footer-nav author";
+    grid-template-columns: 299px calc(100% - 667px) 368px;
+    grid-template-rows: 85px 1fr 135px;
+  }
+
+  .logo {
+    @include logo;
+    grid-area: logo;
+  }
+
+  .subscribe-form {
+    justify-self: flex-end;
+    @include flex(column, space-between);
+    align-items: flex-srart;
+    width: 368px;
+    height: 100%;
+    grid-area: subscribe;
+
+    .subscribe-form__field {
+      width: 100%;
+      @include flex(row, space-between);
+    }
+
+    h4 {
+      align-self: flex-start;
+      color: white;
+    }
+
+    .subscribe-form__email {
+      width: 228px;
+      height: 42px;
+      padding: 10px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: #BDBDBD;
+      border: 0.7px solid $orange;
+      border-radius: 2px;
+      background-color: #111115;
+
+      &:focus .submit-btn {
+        border: 1px solid $green;
+        color: $green;
+      }
+    }
+
+    .submit-btn {
+      width: 129px;
+      height: 42px;
+      border: 1px solid $black-blue;
+      border-radius: 5px;
+      background-color: $light-gray;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      color: black;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $orange;
+      }
+
+      &:active {
+        background-color: $light-gray;
+        border: 1px solid $green;
+        color: $green;
+      }
+
+      &:focus {
+        border: 1px solid $green;
+        color: $green;
+      }
+    }
+  }
+
+  .txt-btn {
+    align-self: center;
+    grid-area: donate-btn;
+    border-radius: 5px;
+  }
+
+  .socials-container {
+    grid-area: social;
+    width: 111px;
+    height: 134px;
+
+    ul {
+      width: 100%;
+      height: 100%;
+      @include flex(column, space-between);
+      align-items: srart;
+
+      .socials-container__item {
+        width: 100%;
+        @include flex(row, left);
+
+        &:hover .socials-ellipse {
+          cursor: pointer;
+          background: $orange-hover;
+        }
+
+        &:hover p {
+          cursor: pointer;
+          color: $orange-hover;
+        }
+
+        .socials-ellipse {
+          @include flex(column, space-around);
+          width: 26px;
+          height: 26px;
+          margin-right: 12px;
+          background: rgba(196, 196, 196, 0.5);
+          border-radius: 50%;
+        }
+
+        p {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 140%;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .footer-nav {
+    grid-area: footer-nav;
+    align-self: end;
+    justify-self: end;
+    width: 362px;
+    height: 22px;
+    margin-right: 30px;    
+    
+    .menu {
+      @include menu;
+    }
+
+    .menu__item {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: white;
+
+      &:hover {
+        @include menu-hover;
+      }
+    }
+
+    .menu__item_active {
+      color: $orange;
+
+      &:hover {
+        cursor: default;
+        color: $orange;
+      }
+    }
+  }
+
+  .author-data {
+    @include flex(column, space-between);
+    align-self: end;
+    justify-self: end;
+    grid-area: author;
+    width: 230px;
+    height: 51px;
+
+    p {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 100;
+      font-size: 16px;
+      line-height: 130%;
+      color: white;
+    }
+  }
+}
