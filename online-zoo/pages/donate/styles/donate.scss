@@ -1,6 +1,8 @@
 @import "./mixins";
 @import "./variables";
 
+
+
 html {
   scroll-behavior: smooth;  
 }
@@ -83,7 +85,17 @@ h2 {
   font-weight: 400;
   font-size: 48px;
   line-height: 120%;
-  color: $black-blue;
+  color: $orange-h2;
+}
+
+h3 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 130%;
+  // text-transform: uppercase;
+  color: white;
 }
 
 h4 {
@@ -169,6 +181,286 @@ main {
   background-size: cover;
   background-position: center;
 }
+
+.feed {
+  width: 100%;
+  height: 1477px;
+  padding: 40px 0 30px 0;
+  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  opacity: 0.9;
+
+  .wrapper {
+    @include flex(column, baseline);
+    position: relative;
+    height: 100%;
+    //padding: 41px 0 59px 0;
+  }
+
+  .feed__txt {
+    @include flex(column, space-between);
+    margin-bottom: 60px;
+
+    p {
+      margin: 10px 0 40px 0;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: white;
+    }
+
+    h3 {
+      align-self: baseline;
+
+      &:nth-child(3n) {
+        color: $orange-h2;
+      }
+    }
+  }
+
+  .feed-donation-info {
+    @include flex(column, flex-srart);
+    position: absolute;
+    top: 295px;
+    left: 0;
+    width: 100%;
+    height: 964px;
+    padding: 40px 92px 62px 92px;
+    background: rgba(253, 253, 255, 0.52);
+    opacity: 1;
+    border-radius: 20px;
+
+    p {
+      margin-top: 30px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: $black-blue;
+    }
+  }
+  
+  h4 {
+    margin: 20px 0 60px 0;
+    align-self: baseline;
+  }
+
+  .feed-container__count {
+    @include flex(row, space-between);
+    width: 533px;
+    height: 246px;
+
+    .feed-count {
+      @include flex(column, space-between);
+      width: 159px;
+      height: 100%;
+      padding: 105px 0 50px 0;
+
+      p {
+        &:nth-child(1) {
+          margin-top: 0;
+          margin-bottom: 11px;
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 72px;
+          line-height: 80%;
+          text-align: center;
+          text-transform: uppercase;
+          color: black;
+        }
+
+        &:nth-child(2n) {
+          margin-top: 0;
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 140%;
+          text-align: center;
+          color: $black-blue;
+        }
+      }
+    }
+
+    .multiple-sign {
+      height: 100%;
+      width: 89px;
+      padding: 130px 0 0 5px;
+    }
+
+    .animals-widget {
+      width: 284px;
+      height: 100%;
+    }
+  }
+
+  .feed-range-container {
+    @include flex(column, space-between);
+    align-items: baseline;
+    width: 100%;
+    height: 114px;
+    margin: 48px 0 50px 0;
+
+    p {
+      margin: 0 0 5px 0;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: black;
+    }
+
+    .feed-range {
+      position: relative;
+      width: 976px;
+      height: 27px;
+      background: #404950;
+      border-radius: 2px;
+
+      .feed-range__line {
+        position: absolute;
+        top: 12px;
+        left: 31px;
+        width: 915px;
+        height: 2px;
+        background: #72828E;
+      }
+
+      .feed-range__dott-container {
+        position: absolute;
+        top: 4px;
+        left: 11px;
+        @include flex(row, space-between);
+        width: 950px;
+        height: 19px;
+      }    
+
+      .feed-range__dott {
+        @include flex(column, center);
+        width: 40px;
+        height: 40px;
+        background-image: none;
+
+        &:hover {
+          cursor: pointer;
+          background-image: url(../../../assets/icons/roller_icon.svg);
+          background-size: contain;
+        }
+        
+        .yellow-dott {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: #FFEE2E;
+        }
+        
+      }
+    }
+
+    .feed-range-values {
+      @include flex(row, space-between);
+      width: 97.5%;
+      height: 36px;
+
+      .range-value {
+        @include flex(row, flex-end);
+        width: 70px;
+        height: 100%;
+
+        p {
+          margin: 0;
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 26px;
+          line-height: 140%;
+          text-transform: uppercase;  
+          color: $black-blue;
+        }      
+      }
+    }
+  }
+
+  .another-amount {
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+
+    position: relative;
+    width: 268px;
+    height: 54px;
+    margin-bottom: 25px;
+    padding-left: 9px;
+    border: 1px solid #929699;
+    border-radius: 2px;
+
+    input {
+      width: 100%;
+      height: 100%;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: #929699;
+      background-color: unset;
+    }
+
+    .dollar {
+      position: absolute;
+      left: 248px;
+      top: 17px;
+      width: 10px;
+      height: 20px;      
+    }
+  }
+
+  .monthly-once {
+    @include flex(row, space-between);
+    width: 218px;
+    height: 22px;
+    margin-bottom: 31px;
+
+    div {
+      width: 84px;
+      height: 100%;
+      @include flex(row, flex-srart);
+    }
+
+    input[type="radio"]{
+      appearance: auto;
+      width: 16px;
+      height: 16px;   
+      margin-right: 10px;
+      border-color: $orange-h2;
+      border-radius: 50%;
+    } 
+
+    label {
+      height: 100%;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: $black-blue;
+    }
+  }
+}
+
+
+
+
 
 footer {
   background-color: #111115;
