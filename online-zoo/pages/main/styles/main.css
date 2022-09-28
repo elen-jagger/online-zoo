@@ -44,6 +44,19 @@ ul {
   margin: 0 auto;
 }
 
+@media (max-width: 1599px) {
+  .wrapper {
+    width: 95%;
+    max-width: 940px;
+  }
+}
+
+@media (max-width: 999px) {
+  .wrapper {
+    max-width: 600px;
+  }
+}
+
 .txt-btn {
   width: 298px;
   height: 54px;
@@ -142,7 +155,7 @@ header .wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 80px;
+  height: 100%;
   color: white;
 }
 
@@ -168,6 +181,29 @@ header .logo .bamboo {
   position: relative;
   left: 10px;
   bottom: 25px;
+}
+
+@media (max-width: 999px) {
+  header .logo {
+    width: 47px;
+    height: 34px;
+  }
+}
+
+@media (max-width: 999px) {
+  header .logo h1 {
+    font-weight: 400;
+    font-size: 12.2899px;
+    line-height: 120%;
+  }
+}
+
+@media (max-width: 999px) {
+  header .logo .bamboo {
+    height: 13.56px;
+    left: 3px;
+    bottom: 15px;
+  }
 }
 
 header .header-nav {
@@ -199,6 +235,12 @@ header .header-nav .menu {
   width: 100%;
 }
 
+@media (max-width: 999px) {
+  header .header-nav .menu {
+    display: none;
+  }
+}
+
 header .header-nav .menu__item {
   font-family: Roboto;
   font-size: 16px;
@@ -221,7 +263,25 @@ header .header-nav .menu__item_active:hover {
   color: #F9804B;
 }
 
+@media (max-width: 1599px) {
+  header .header-nav {
+    width: 430px;
+    margin-left: -260px;
+  }
+}
+
+header .header__bgr-menu {
+  display: none;
+}
+
+@media (max-width: 999px) {
+  header .header__bgr-menu {
+    display: block;
+  }
+}
+
 header .designed {
+  width: 105px;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
@@ -232,6 +292,18 @@ header .designed {
 header .designed:hover {
   cursor: pointer;
   color: #E47209;
+}
+
+@media (max-width: 999px) {
+  header .designed {
+    display: none;
+  }
+}
+
+@media (max-width: 999px) {
+  header {
+    height: 34px;
+  }
 }
 
 .watch {
@@ -258,6 +330,13 @@ header .designed:hover {
           align-items: center;
   height: 100%;
   padding: 86px 50px 100px 0;
+}
+
+@media (max-width: 1599px) {
+  .watch .wrapper {
+    padding: 41px 56px 48px 0;
+    overflow: clip;
+  }
 }
 
 .watch .watch-content {
@@ -305,6 +384,28 @@ header .designed:hover {
   height: 465px;
   background-color: #F9804B;
   border-radius: 50%;
+}
+
+@media (max-width: 1599px) {
+  .watch .watch-content p:before {
+    bottom: 4px;
+    right: 90px;
+    width: 367px;
+    height: 367px;
+  }
+}
+
+@media (max-width: 1599px) {
+  .watch .watch-content p {
+    font-size: 85px;
+  }
+}
+
+@media (max-width: 1599px) {
+  .watch {
+    height: 504px;
+    background-image: url("../../../assets/images/panda-1000.jpg");
+  }
 }
 
 .backstage {

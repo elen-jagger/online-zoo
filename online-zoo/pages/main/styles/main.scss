@@ -42,6 +42,15 @@ ul{
   width: 100%;
   max-width: 1160px;
   margin: 0 auto;
+
+  @media (max-width: 1599px) {
+    width: 95%;
+    max-width: 940px;
+  }
+
+  @media (max-width: 999px) {
+    max-width: 600px;
+  }
 }
 
 .txt-btn {
@@ -129,12 +138,33 @@ header {
 
   .wrapper {
     @include flex(row, space-between);
-    height: 80px;
+    height: 100%;
     color: white;
   }
 
   .logo {
     @include logo;
+
+    @media (max-width: 999px) {
+      width: 47px;
+      height: 34px;
+    }
+
+    h1 {
+      @media (max-width: 999px) {
+        font-weight: 400;
+        font-size: 12.2899px;
+        line-height: 120%;
+      }
+    }
+
+    .bamboo {
+      @media (max-width: 999px) {
+        height: 13.56px;
+        left: 3px;
+        bottom: 15px;
+      }
+    }
   } 
 
   .header-nav {
@@ -146,6 +176,10 @@ header {
 
     .menu {
       @include menu;
+
+      @media (max-width: 999px) {
+        display: none;
+      }
     }
 
     .menu__item{
@@ -168,9 +202,27 @@ header {
         color: $orange;
       }
     }
+    
+    @media (max-width: 1599px) {
+      width: 430px;
+      margin-left: -260px;
+    }
+
+    @media (max-width: 999px) {
+      
+    }
+  }
+
+  .header__bgr-menu {
+    display: none;
+
+    @media (max-width: 999px) {
+      display: block;
+    }
   }
 
   .designed {
+    width: 105px;
     font-family: Roboto;
     font-size: 16px;
     font-weight: 500;
@@ -181,6 +233,14 @@ header {
       cursor: pointer;
       color: $orange-hover;
     }
+      
+    @media (max-width: 999px) {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 999px) {
+    height: 34px;
   }
 }
 
@@ -196,6 +256,12 @@ header {
     @include flex(row, flex-end);
     height: 100%;
     padding: 86px 50px 100px 0;
+
+    @media (max-width: 1599px) {
+      padding: 41px 56px 48px 0;
+      overflow: clip;
+    }
+    
   }
 
   .watch-content {
@@ -229,8 +295,26 @@ header {
         height: 465px;
         background-color: $orange;
         border-radius: 50%;
+
+        @media (max-width: 1599px) {
+          bottom: 4px;
+          right: 90px;
+          width: 367px;
+          height: 367px;          
+        }
+      }
+
+      @media (max-width: 1599px) {
+        font-size: 85px;
       }
     }
+
+    
+  }
+
+  @media (max-width: 1599px) {
+    height: 504px;
+    background-image: url("../../../assets/images/panda-1000.jpg");
   }
 }
 
