@@ -261,7 +261,15 @@ header {
       padding: 41px 56px 48px 0;
       overflow: clip;
     }
-    
+
+    @media (max-width: 999px) {
+      padding: 5px 0 40px 0;
+    }
+
+    @media (max-width: 639px) {
+      height: 261px;
+      padding: 38px 3px 115px 0;
+    }
   }
 
   .watch-content {
@@ -302,19 +310,77 @@ header {
           width: 367px;
           height: 367px;          
         }
+
+        @media (max-width: 999px) {
+          bottom: 6px;
+          right: 51px;
+          width: 237.6px;
+          height: 237.6px;          
+        }
+
+        @media (max-width: 639px) {
+          bottom: 3px;
+          right: 28px;
+          width: 119.09px;
+          height: 119.09px;          
+        }
       }
 
       @media (max-width: 1599px) {
         font-size: 85px;
       }
+
+      @media (max-width: 999px) {
+        width: 255.64px;
+        height: 204.38px;
+        font-size: 54.3px;;
+      }
+
+      @media (max-width: 639px) {
+        width: 128.13px;
+        height: 102.44px;
+        font-size: 28px;;
+      }
     }
 
-    
-  }
+    button {
+      @media (max-width: 999px) {
+        position: absolute;
+        top: 195px;
+        right: 300px;
+      }
 
+      @media (max-width: 639px) {
+        top: 167px;
+        right: 0px;
+      }
+    }
+
+    @media (max-width: 999px) {
+      position: relative;
+      width: 255.64px;
+      height: 204.38px;
+    }
+
+    @media (max-width: 639px) {
+      width: 128.13px;
+      height: 102.44px;
+    }
+  }
+  
   @media (max-width: 1599px) {
     height: 504px;
     background-image: url("../../../assets/images/panda-1000.jpg");
+  }
+
+  @media (max-width: 999px) {
+    height: 339px;
+    background-image: url("../../../assets/images/panda-640.jpg");
+  }
+
+  @media (max-width: 639px) {
+    height: 187px;
+    background-image: url("../../../assets/images/panda-320.jpg");
   }
 }
 

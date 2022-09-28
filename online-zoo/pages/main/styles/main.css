@@ -339,6 +339,19 @@ header .designed:hover {
   }
 }
 
+@media (max-width: 999px) {
+  .watch .wrapper {
+    padding: 5px 0 40px 0;
+  }
+}
+
+@media (max-width: 639px) {
+  .watch .wrapper {
+    height: 261px;
+    padding: 38px 3px 115px 0;
+  }
+}
+
 .watch .watch-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -395,9 +408,73 @@ header .designed:hover {
   }
 }
 
+@media (max-width: 999px) {
+  .watch .watch-content p:before {
+    bottom: 6px;
+    right: 51px;
+    width: 237.6px;
+    height: 237.6px;
+  }
+}
+
+@media (max-width: 639px) {
+  .watch .watch-content p:before {
+    bottom: 3px;
+    right: 28px;
+    width: 119.09px;
+    height: 119.09px;
+  }
+}
+
 @media (max-width: 1599px) {
   .watch .watch-content p {
     font-size: 85px;
+  }
+}
+
+@media (max-width: 999px) {
+  .watch .watch-content p {
+    width: 255.64px;
+    height: 204.38px;
+    font-size: 54.3px;
+  }
+}
+
+@media (max-width: 639px) {
+  .watch .watch-content p {
+    width: 128.13px;
+    height: 102.44px;
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 999px) {
+  .watch .watch-content button {
+    position: absolute;
+    top: 195px;
+    right: 300px;
+  }
+}
+
+@media (max-width: 639px) {
+  .watch .watch-content button {
+    top: 167px;
+    right: 0px;
+  }
+}
+
+@media (max-width: 999px) {
+  .watch .watch-content {
+    position: relative;
+    width: 255.64px;
+    height: 204.38px;
+  }
+}
+
+@media (max-width: 639px) {
+  .watch .watch-content {
+    width: 128.13px;
+    height: 102.44px;
   }
 }
 
@@ -405,6 +482,20 @@ header .designed:hover {
   .watch {
     height: 504px;
     background-image: url("../../../assets/images/panda-1000.jpg");
+  }
+}
+
+@media (max-width: 999px) {
+  .watch {
+    height: 339px;
+    background-image: url("../../../assets/images/panda-640.jpg");
+  }
+}
+
+@media (max-width: 639px) {
+  .watch {
+    height: 187px;
+    background-image: url("../../../assets/images/panda-320.jpg");
   }
 }
 
