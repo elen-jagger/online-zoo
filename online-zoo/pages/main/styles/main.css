@@ -520,12 +520,53 @@ header .designed:hover {
   padding: 140px 0 180px 0;
 }
 
+@media (max-width: 1599px) {
+  .backstage .wrapper {
+    padding: 100px 0 144px 0;
+  }
+}
+
+@media (max-width: 999px) {
+  .backstage .wrapper {
+    padding: 60px 0 80px 0;
+  }
+}
+
+@media (max-width: 639px) {
+  .backstage .wrapper {
+    padding: 105px 0 60px 0;
+  }
+}
+
 .backstage .backstage__img {
   width: 53%;
   max-width: 610px;
   height: 403px;
   background-image: url("../../../assets/images/bamboo-cap.jpg");
   background-size: cover;
+}
+
+@media (max-width: 1599px) {
+  .backstage .backstage__img {
+    width: 48.5%;
+    max-width: 455px;
+    height: 408px;
+    margin-right: 15px;
+    background-image: url("../../../assets/images/bamboo-cap-1000.jpg");
+  }
+}
+
+@media (max-width: 1001px) {
+  .backstage .backstage__img {
+    width: 455px;
+    height: 408px;
+  }
+}
+
+@media (max-width: 999px) {
+  .backstage .backstage__img {
+    display: none;
+  }
 }
 
 .backstage .backstage__content {
@@ -553,6 +594,13 @@ header .designed:hover {
   margin-bottom: 20px;
 }
 
+@media (max-width: 639px) {
+  .backstage .backstage__content h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+}
+
 .backstage .backstage__content p {
   font-family: 'Roboto';
   font-style: normal;
@@ -562,17 +610,77 @@ header .designed:hover {
   color: #333B41;
 }
 
+@media (max-width: 639px) {
+  .backstage .backstage__content p:nth-child(2n) {
+    line-height: 140%;
+  }
+}
+
 .backstage .backstage__content h4 {
   margin: 55px 0 35px 0;
 }
 
-.backstage img {
+@media (max-width: 999px) {
+  .backstage .backstage__content h4 {
+    margin: 32px 0 21px 0;
+  }
+}
+
+@media (max-width: 639px) {
+  .backstage .backstage__content h4 {
+    margin: 17px 0 10px 0;
+  }
+}
+
+@media (max-width: 1599px) {
+  .backstage .backstage__content {
+    width: 454px;
+    height: 427px;
+  }
+}
+
+@media (max-width: 999px) {
+  .backstage .backstage__content {
+    width: 495px;
+    height: 367px;
+  }
+}
+
+.backstage .backstage__bg-img {
   position: absolute;
   top: 10px;
   right: 0;
   z-index: -1;
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  width: 205px;
+  height: 605px;
+  background-image: url("../../../assets/images/backstage-flower.png");
+}
+
+@media (max-width: 1599px) {
+  .backstage .backstage__bg-img {
+    display: none;
+  }
+}
+
+@media (max-width: 999px) {
+  .backstage .backstage__bg-img {
+    top: 0px;
+    right: 0;
+    display: block;
+    height: 476px;
+    width: 190px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 60px -3px;
+  }
+}
+
+@media (max-width: 639px) {
+  .backstage .backstage__bg-img {
+    top: 47px;
+    height: 217px;
+    background-position: 157px -7px;
+  }
 }
 
 .pets {
