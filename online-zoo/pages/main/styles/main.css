@@ -1201,7 +1201,7 @@ header .designed:hover {
   }
 }
 
-@media (max-width: 999px) {
+@media (max-width: 639px) {
   .feed h4 {
     text-align: center;
     margin: 0 0 20px 0;
@@ -1245,7 +1245,7 @@ header .designed:hover {
   }
 }
 
-@media (max-width: 999px) {
+@media (max-width: 639px) {
   .feed p {
     display: none;
   }
