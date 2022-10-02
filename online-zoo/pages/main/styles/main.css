@@ -724,7 +724,7 @@ header .designed:hover {
   }
 }
 
-@media (max-width: 999px) {
+@media (max-width: 639px) {
   .pets .wrapper {
     padding-bottom: 60px;
   }
@@ -1097,7 +1097,7 @@ header .designed:hover {
   }
 }
 
-@media (max-width: 1599px) {
+@media (max-width: 999px) {
   .feed .wrapper :nth-child(5) {
     margin: 0;
   }
