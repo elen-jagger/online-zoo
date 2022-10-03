@@ -314,6 +314,13 @@ main {
   }
 }
 
+@media (max-width: 639px) {
+  .watch {
+    height: 187px;
+    background-image: url("../../../assets/images/panda-donate-320.jpg");
+  }
+}
+
 .feed {
   width: 100%;
   height: 1477px;
@@ -381,6 +388,12 @@ main {
   }
 }
 
+@media (max-width: 639px) {
+  .feed .feed__txt p {
+    margin: 20px 0 27px 0;
+  }
+}
+
 .feed .feed__txt h3 {
   -ms-flex-item-align: baseline;
       align-self: baseline;
@@ -405,6 +418,14 @@ main {
 @media (max-width: 999px) {
   .feed .feed__txt h3 {
     padding-right: 30px;
+  }
+}
+
+@media (max-width: 639px) {
+  .feed .feed__txt h3 {
+    padding: 0;
+    line-height: 120%;
+    font-size: 24px;
   }
 }
 
@@ -433,6 +454,12 @@ main {
   border-radius: 20px;
 }
 
+@media (max-width: 639px) {
+  .feed .feed-donation-info h2 {
+    font-size: 24px;
+  }
+}
+
 .feed .feed-donation-info p {
   margin-top: 30px;
   font-family: 'Roboto';
@@ -458,6 +485,14 @@ main {
   }
 }
 
+@media (max-width: 639px) {
+  .feed .feed-donation-info {
+    top: 505px;
+    height: 590px;
+    padding: 20px 0;
+  }
+}
+
 .feed h4 {
   margin: 20px 0 60px 0;
   -ms-flex-item-align: baseline;
@@ -474,6 +509,13 @@ main {
   .feed h4 {
     margin: 20px 0 50px 0;
     text-align: center;
+  }
+}
+
+@media (max-width: 639px) {
+  .feed h4 {
+    margin: 10px 0 15px 0;
+    font-size: 16px;
   }
 }
 
@@ -527,6 +569,12 @@ main {
   color: black;
 }
 
+@media (max-width: 639px) {
+  .feed .feed-container__count .feed-count p:nth-child(1) {
+    font-size: 40.6015px;
+  }
+}
+
 .feed .feed-container__count .feed-count p:nth-child(2n) {
   margin-top: 0;
   font-family: 'Roboto';
@@ -538,15 +586,56 @@ main {
   color: #333B41;
 }
 
+@media (max-width: 639px) {
+  .feed .feed-container__count .feed-count p:nth-child(2n) {
+    font-size: 9.02255px;
+  }
+}
+
+@media (max-width: 639px) {
+  .feed .feed-container__count .feed-count {
+    padding: 58px 0 50px 0;
+    width: 89.66px;
+  }
+}
+
 .feed .feed-container__count .multiple-sign {
   height: 100%;
   width: 89px;
   padding: 130px 0 0 5px;
 }
 
+@media (max-width: 639px) {
+  .feed .feed-container__count .multiple-sign {
+    width: 50px;
+    height: 100%;
+    padding: 17px 0 0 5px;
+  }
+}
+
+@media (max-width: 639px) {
+  .feed .feed-container__count .multiple-sign img {
+    width: 10px;
+    height: 100%;
+  }
+}
+
 .feed .feed-container__count .animals-widget {
   width: 284px;
   height: 100%;
+}
+
+@media (max-width: 639px) {
+  .feed .feed-container__count .animals-widget {
+    width: auto;
+  }
+}
+
+@media (max-width: 639px) {
+  .feed .feed-container__count {
+    width: 300px;
+    height: 138.72px;
+  }
 }
 
 .feed .feed-range-container {
@@ -595,6 +684,12 @@ main {
   }
 }
 
+@media (max-width: 639px) {
+  .feed .feed-range-container p {
+    margin: 0 0 2px 0;
+  }
+}
+
 .feed .feed-range-container .feed-range {
   position: relative;
   width: 976px;
@@ -623,6 +718,14 @@ main {
   .feed .feed-range-container .feed-range .feed-range__line {
     left: 40px;
     width: 524px;
+  }
+}
+
+@media (max-width: 639px) {
+  .feed .feed-range-container .feed-range .feed-range__line {
+    top: 5px;
+    left: 20px;
+    width: 263px;
   }
 }
 
@@ -656,8 +759,17 @@ main {
 
 @media (max-width: 999px) {
   .feed .feed-range-container .feed-range .feed-range__dott-container {
+    top: 3px;
     left: 20px;
     width: 560px;
+  }
+}
+
+@media (max-width: 639px) {
+  .feed .feed-range-container .feed-range .feed-range__dott-container {
+    top: -3px;
+    left: 2px;
+    width: 300px;
   }
 }
 
@@ -693,6 +805,13 @@ main {
   background: #FFEE2E;
 }
 
+@media (max-width: 639px) {
+  .feed .feed-range-container .feed-range .feed-range__dott .yellow-dott {
+    width: 5px;
+    height: 5px;
+  }
+}
+
 @media (max-width: 1599px) {
   .feed .feed-range-container .feed-range .feed-range__dott:nth-child(1) {
     display: none;
@@ -721,6 +840,14 @@ main {
   }
 }
 
+@media (max-width: 639px) {
+  .feed .feed-range-container .feed-range .feed-range__dott:nth-child(6) {
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 10px;
+  }
+}
+
 @media (max-width: 1599px) {
   .feed .feed-range-container .feed-range {
     width: 810px;
@@ -730,6 +857,12 @@ main {
 @media (max-width: 999px) {
   .feed .feed-range-container .feed-range {
     width: 100%;
+  }
+}
+
+@media (max-width: 639px) {
+  .feed .feed-range-container .feed-range {
+    height: 14px;
   }
 }
 
@@ -780,6 +913,19 @@ main {
   color: #333B41;
 }
 
+@media (max-width: 639px) {
+  .feed .feed-range-container .feed-range-values .range-value p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 639px) {
+  .feed .feed-range-container .feed-range-values .range-value img {
+    width: 5px;
+    height: 10px;
+  }
+}
+
 @media (max-width: 1599px) {
   .feed .feed-range-container .feed-range-values .range-value:nth-child(1) {
     display: none;
@@ -789,6 +935,23 @@ main {
 @media (max-width: 999px) {
   .feed .feed-range-container .feed-range-values .range-value:nth-child(2), .feed .feed-range-container .feed-range-values .range-value:nth-child(3) {
     display: none;
+  }
+}
+
+@media (max-width: 639px) {
+  .feed .feed-range-container .feed-range-values .range-value {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 50%;
+  }
+}
+
+@media (max-width: 639px) {
+  .feed .feed-range-container .feed-range-values {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -804,6 +967,13 @@ main {
   .feed .feed-range-container {
     height: 105px;
     margin: 40px 0 50px 0;
+  }
+}
+
+@media (max-width: 639px) {
+  .feed .feed-range-container {
+    height: 85px;
+    margin: 5px 0 6px 0px;
   }
 }
 
@@ -868,6 +1038,12 @@ main {
   }
 }
 
+@media (max-width: 639px) {
+  .feed .another-amount {
+    margin-bottom: 25px;
+  }
+}
+
 .feed .monthly-once {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -926,6 +1102,12 @@ main {
   color: #333B41;
 }
 
+@media (max-width: 639px) {
+  .feed .monthly-once {
+    margin-bottom: 28px;
+  }
+}
+
 @media (max-width: 1599px) {
   .feed {
     height: 1333px;
@@ -936,6 +1118,12 @@ main {
 @media (max-width: 999px) {
   .feed {
     padding: 30px 0;
+  }
+}
+
+@media (max-width: 639px) {
+  .feed {
+    height: 1145px;
   }
 }
 
@@ -989,7 +1177,7 @@ footer .wrapper {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 320px;
+    height: 335px;
     padding: 20px 10px 0 10px;
   }
 }

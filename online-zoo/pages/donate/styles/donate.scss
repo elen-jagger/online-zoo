@@ -249,6 +249,11 @@ main {
     height: 335px;
     background-image: url("../../../assets/images/panda-donate-640.jpg");
   }
+
+  @media (max-width: 639px) {
+    height: 187px;
+    background-image: url("../../../assets/images/panda-donate-320.jpg");
+  }
 }
 
 .feed {
@@ -286,6 +291,10 @@ main {
         margin: 15px 0 30px 0;
         padding-right: 10px;
       }
+
+      @media (max-width: 639px) {
+        margin: 20px 0 27px 0;
+      }
     }
 
     h3 {
@@ -300,13 +309,19 @@ main {
           font-size: 24px;
         }        
       }
-
+      
       @media (max-width: 1599px) {
         padding-right: 185px;
       }
 
       @media (max-width: 999px) {
         padding-right: 30px;        
+      }
+
+      @media (max-width: 639px) {
+        padding: 0;        
+        line-height: 120%;
+        font-size: 24px;
       }
     }
   }
@@ -322,6 +337,12 @@ main {
     background: rgba(253, 253, 255, 0.52);
     opacity: 1;
     border-radius: 20px;
+
+    h2 {
+      @media (max-width: 639px) {
+        font-size: 24px;
+      }
+    }
 
     p {
       margin-top: 30px;
@@ -343,6 +364,12 @@ main {
       top: 340px;
       padding: 30px 0 30px 0;
     }
+
+    @media (max-width: 639px) {
+      top: 505px;
+      height: 590px;
+      padding: 20px 0;
+    }
   }
   
   h4 {
@@ -356,6 +383,11 @@ main {
     @media (max-width: 999px) {
       margin: 20px 0 50px 0;
       text-align: center;
+    }
+
+    @media (max-width: 639px) {
+      margin: 10px 0 15px 0;
+      font-size: 16px;
     }
   }
 
@@ -382,6 +414,10 @@ main {
           text-align: center;
           text-transform: uppercase;
           color: black;
+
+          @media (max-width: 639px) {
+            font-size: 40.6015px;
+          }
         }
 
         &:nth-child(2n) {
@@ -393,7 +429,16 @@ main {
           line-height: 140%;
           text-align: center;
           color: $black-blue;
+
+          @media (max-width: 639px) {
+            font-size: 9.02255px;
+          }
         }
+      }
+
+      @media (max-width: 639px) {
+        padding: 58px 0 50px 0;
+        width: 89.66px;
       }
     }
 
@@ -401,11 +446,33 @@ main {
       height: 100%;
       width: 89px;
       padding: 130px 0 0 5px;
+
+      @media (max-width: 639px) {
+        width: 50px;
+        height: 100%;
+        padding: 17px 0 0 5px;
+      }
+
+      img {
+        @media (max-width: 639px) {
+          width: 10px;
+          height: 100%;
+        }
+      }
     }
 
     .animals-widget {
       width: 284px;
       height: 100%;
+
+      @media (max-width: 639px) {
+        width: auto;
+      }
+    }
+
+    @media (max-width: 639px) {
+      width: 300px;
+      height: 138.72px;
     }
   }
 
@@ -433,6 +500,10 @@ main {
         margin: 0 0 -5px 10px;
         align-self: baseline;
       }
+
+      @media (max-width: 639px) {
+        margin: 0 0 2px 0;
+      }
     }
 
     .feed-range {
@@ -459,6 +530,12 @@ main {
           left: 40px;
           width: 524px;
         }
+
+        @media (max-width: 639px) {
+          top: 5px;
+          left: 20px;
+          width: 263px;
+        }
       }
 
       .feed-range__dott-container {
@@ -475,8 +552,15 @@ main {
         }
 
         @media (max-width: 999px) {
+          top: 3px;
           left: 20px;
           width: 560px;
+        }
+
+        @media (max-width: 639px) {
+          top: -3px;
+          left: 2px;
+          width: 300px;
         }
       }    
 
@@ -497,6 +581,11 @@ main {
           height: 10px;
           border-radius: 50%;
           background: #FFEE2E;
+
+          @media (max-width: 639px) {
+            width: 5px;
+            height: 5px;
+          }
         }
                 
         &:nth-child(1) {
@@ -525,6 +614,12 @@ main {
             background-image: url(../../../assets/icons/roller_icon.svg);
             background-size: contain;
           }          
+
+          @media (max-width: 639px) {
+            background-repeat: no-repeat;
+            background-size: 50%;
+            background-position: 10px;
+          }
         }
       }
 
@@ -534,6 +629,10 @@ main {
 
       @media (max-width: 999px) {
         width: 100%;
+      }
+
+      @media (max-width: 639px) {
+        height: 14px;
       }
     }
 
@@ -556,7 +655,18 @@ main {
           line-height: 140%;
           text-transform: uppercase;  
           color: $black-blue;
+          
+          @media (max-width: 639px) {
+            font-size: 13px;
+          }
         }      
+
+        img {
+          @media (max-width: 639px) {
+            width: 5px;
+            height: 10px;
+          }          
+        }
 
         &:nth-child(1) {
           @media (max-width: 1599px) {
@@ -570,9 +680,15 @@ main {
           }          
         }
 
+        @media (max-width: 639px) {
+          justify-content: center;
+          height: 50%;
+        }
       }
 
-      
+      @media (max-width: 639px) {
+        align-items: flex-start;
+      }
     }
 
     @media (max-width: 1599px) {
@@ -582,6 +698,11 @@ main {
     @media (max-width: 999px) {
       height: 105px;
       margin: 40px 0 50px 0;
+    }
+
+    @media (max-width: 639px) {
+      height: 85px;
+      margin: 5px 0 6px 0px;
     }
   }
 
@@ -638,6 +759,10 @@ main {
       height: 42px;
       margin-bottom: 30px;
     }
+
+    @media (max-width: 639px) {
+      margin-bottom: 25px;
+    }
   }
 
   .monthly-once {
@@ -670,6 +795,10 @@ main {
       line-height: 140%;
       color: $black-blue;
     }
+
+    @media (max-width: 639px) {
+      margin-bottom: 28px;
+    }
   }
 
   @media (max-width: 1599px) {
@@ -679,6 +808,10 @@ main {
 
   @media (max-width: 999px) {
     padding: 30px 0;
+  }
+
+  @media (max-width: 639px) {
+    height: 1145px;
   }
 }
 
@@ -711,7 +844,7 @@ footer {
 
     @media (max-width: 639px) {
       @include flex(column, baseline);
-      height: 320px;
+      height: 335px;
       padding: 20px 10px 0 10px;
     }
   }
