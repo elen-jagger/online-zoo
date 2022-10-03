@@ -244,6 +244,11 @@ main {
   @media (max-width: 1599px) {
     background-image: url("../../../assets/images/panda-donate-1000.jpg");
   }
+
+  @media (max-width: 999px) {
+    height: 335px;
+    background-image: url("../../../assets/images/panda-donate-640.jpg");
+  }
 }
 
 .feed {
@@ -276,6 +281,11 @@ main {
         margin: 30px 0 44px 0;
         padding-right: 10px;
       }
+
+      @media (max-width: 999px) {
+        margin: 15px 0 30px 0;
+        padding-right: 10px;
+      }
     }
 
     h3 {
@@ -285,8 +295,18 @@ main {
         color: $orange-h2;
       }
 
+      &:nth-child(1) {
+        @media (max-width: 999px) {
+          font-size: 24px;
+        }        
+      }
+
       @media (max-width: 1599px) {
         padding-right: 185px;
+      }
+
+      @media (max-width: 999px) {
+        padding-right: 30px;        
       }
     }
   }
@@ -318,6 +338,11 @@ main {
       height: 918px;
       padding: 20px 46px 46px 46px;
     }
+
+    @media (max-width: 999px) {
+      top: 340px;
+      padding: 30px 0 30px 0;
+    }
   }
   
   h4 {
@@ -326,6 +351,11 @@ main {
 
     @media (max-width: 1599px) {
       margin: 10px 0 60px 0;
+    }
+
+    @media (max-width: 999px) {
+      margin: 20px 0 50px 0;
+      text-align: center;
     }
   }
 
@@ -398,6 +428,11 @@ main {
       @media (max-width: 1599px) {
         margin: 0 0 5px 20px;
       }
+
+      @media (max-width: 999px) {
+        margin: 0 0 -5px 10px;
+        align-self: baseline;
+      }
     }
 
     .feed-range {
@@ -419,6 +454,11 @@ main {
           left: 13px;
           width: 785px;
         }
+
+        @media (max-width: 999px) {
+          left: 40px;
+          width: 524px;
+        }
       }
 
       .feed-range__dott-container {
@@ -434,6 +474,10 @@ main {
           width: 820px;
         }
 
+        @media (max-width: 999px) {
+          left: 20px;
+          width: 560px;
+        }
       }    
 
       .feed-range__dott {
@@ -456,12 +500,40 @@ main {
         }
                 
         &:nth-child(1) {
-          display: none;
+          @media (max-width: 1599px) {
+            display: none;
+          }          
+        }
+
+        &:nth-child(2), &:nth-child(3) {
+          @media (max-width: 999px) {
+            display: none;
+          }          
+        }
+
+        &:nth-child(3) {
+          @media (max-width: 1599px) {
+            cursor: pointer;
+            background-image: url(../../../assets/icons/roller_icon.svg);
+            background-size: contain;
+          }          
+        }
+
+        &:nth-child(6) {
+          @media (max-width: 999px) {
+            cursor: pointer;
+            background-image: url(../../../assets/icons/roller_icon.svg);
+            background-size: contain;
+          }          
         }
       }
 
       @media (max-width: 1599px) {
         width: 810px;
+      }
+
+      @media (max-width: 999px) {
+        width: 100%;
       }
     }
 
@@ -487,8 +559,17 @@ main {
         }      
 
         &:nth-child(1) {
-          display: none;
+          @media (max-width: 1599px) {
+            display: none;
+          }          
         }
+
+        &:nth-child(2), &:nth-child(3) {
+          @media (max-width: 999px) {
+            display: none;
+          }          
+        }
+
       }
 
       
@@ -496,6 +577,11 @@ main {
 
     @media (max-width: 1599px) {
       align-items: center;
+    }
+
+    @media (max-width: 999px) {
+      height: 105px;
+      margin: 40px 0 50px 0;
     }
   }
 
@@ -520,7 +606,7 @@ main {
     input {
       width: 100%;
       height: 100%;
-    padding-left: 9px;
+      padding-left: 9px;
       font-family: 'Roboto';
       font-style: normal;
       font-weight: 400;
@@ -528,6 +614,10 @@ main {
       line-height: 140%;
       color: #929699;
       background-color: unset;
+
+      @media (max-width: 999px) {
+        padding-left: 5px;
+      }
     }
 
     .dollar {
@@ -535,7 +625,18 @@ main {
       left: 248px;
       top: 17px;
       width: 10px;
-      height: 20px;      
+      height: 20px;   
+      
+      @media (max-width: 999px) {
+        left: 160px;
+        top: 10px;
+      }
+    }
+
+    @media (max-width: 999px) {
+      width: 180px;
+      height: 42px;
+      margin-bottom: 30px;
     }
   }
 
@@ -573,6 +674,11 @@ main {
 
   @media (max-width: 1599px) {
     height: 1333px;
+    padding: 40px 0;
+  }
+
+  @media (max-width: 999px) {
+    padding: 30px 0;
   }
 }
 
