@@ -1325,11 +1325,44 @@ footer {
                          "social footer-nav author";
     grid-template-columns: 299px calc(100% - 667px) 368px;
     grid-template-rows: 85px 1fr 135px;
+
+    @media (max-width: 1599px) {
+      grid-template-columns: 299px calc(100% - 599px) 300px;
+    }
+
+    @media (max-width: 999px) {
+      height: 282px;
+      grid-template-areas: "logo . social"
+                            "donate-btn donate-btn social"
+                            "footer-nav footer-nav author";
+      grid-template-rows: 85px calc(100% - (85px + 55px)) 55px;
+      grid-template-columns: 299px calc(100% - 529px) 230px;
+      padding: 12px 0;
+    }
+
+    @media (max-width: 639px) {
+      @include flex(column, baseline);
+      height: 320px;
+      padding: 20px 10px 0 10px;
+    }
   }
 
   .logo {
     @include logo;
     grid-area: logo;
+
+    @media (max-width: 639px) {
+      width: 128px;
+      height: 23px;
+      margin-right: 0;
+      border: none;
+    }
+
+    .bamboo {
+      @media (max-width: 639px) {
+        left: 70px;
+      }
+    }
   }
 
   .subscribe-form {
@@ -1399,12 +1432,30 @@ footer {
         color: $green;
       }
     }
+
+    @media (max-width: 1599px) {
+      width: 366px;
+      margin-right: 34px;
+    }
+
+    @media (max-width: 999px) {
+      display: none;
+    }
   }
 
   .txt-btn {
     align-self: center;
     grid-area: donate-btn;
     border-radius: 5px;
+
+    @media (max-width: 999px) {
+      align-self: baseline;
+    }
+
+    @media (max-width: 639px) {
+      align-self: center;
+      margin-bottom: 30px;
+    }
   }
 
   .socials-container {
@@ -1439,6 +1490,10 @@ footer {
           margin-right: 12px;
           background: rgba(196, 196, 196, 0.5);
           border-radius: 50%;
+
+          @media (max-width: 999px) {
+            margin-right: 0;
+          }
         }
 
         p {
@@ -1448,8 +1503,34 @@ footer {
           font-size: 16px;
           line-height: 140%;
           color: white;
+
+          @media (max-width: 999px) {
+            display: none;
+          }
+        }
+
+        @media (max-width: 639px) {
+          width: 26px;
+          justify-content: center;
         }
       }
+
+      @media (max-width: 639px) {
+        flex-direction: row;
+      }
+    }
+
+    @media (max-width: 999px) {
+      justify-self: end;
+      width: 26px;
+      height: 163px;
+    }
+
+    @media (max-width: 639px) {
+      justify-self: center;
+      width: 194px;
+      height: 26px;
+      margin: 30px 0;
     }
   }
 
@@ -1486,6 +1567,22 @@ footer {
         color: $orange;
       }
     }
+
+    @media (max-width: 1599px) {
+      width: 333px;
+      margin-right: 17px;
+    }
+
+    @media (max-width: 999px) {
+      justify-self: baseline;
+      margin-right: 0;
+      width: 299px;
+    }
+
+    @media (max-width: 639px) {
+      width: 100%;
+      margin-top: 28px;
+    }
   }
 
   .author-data {
@@ -1503,6 +1600,15 @@ footer {
       font-size: 16px;
       line-height: 130%;
       color: white;
+
+      @media (max-width: 639px) {
+        font-size: 15px;
+        line-height: 120%;
+      }
+    }
+
+    @media (max-width: 639px) {
+      align-items: flex-end;
     }
   }
 }
