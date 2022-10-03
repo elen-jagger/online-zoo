@@ -44,6 +44,15 @@ ul{
   width: 100%;
   max-width: 1160px;
   margin: 0 auto;
+  
+  @media (max-width: 1599px) {
+    width: 95%;
+    max-width: 940px;
+  }
+
+  @media (max-width: 999px) {
+    max-width: 600px;
+  }
 }
 
 .txt-btn {
@@ -113,12 +122,33 @@ header {
 
   .wrapper {
     @include flex(row, space-between);
-    height: 80px;
+    height: 100%;
     color: white;
   }
 
   .logo {
     @include logo;
+
+    @media (max-width: 999px) {
+      width: 47px;
+      height: 34px;
+    }
+
+    h1 {
+      @media (max-width: 999px) {
+        font-weight: 400;
+        font-size: 12.2899px;
+        line-height: 120%;
+      }
+    }
+
+    .bamboo {
+      @media (max-width: 999px) {
+        height: 13.56px;
+        left: 3px;
+        bottom: 15px;
+      }
+    }
   } 
 
   .header-nav {
@@ -130,6 +160,10 @@ header {
 
     .menu {
       @include menu;
+
+      @media (max-width: 999px) {
+        display: none;
+      }
     }
 
     .menu__item{
@@ -152,9 +186,27 @@ header {
         color: $orange;
       }
     }
+    
+    @media (max-width: 1599px) {
+      width: 430px;
+      margin-left: -260px;
+    }
+
+    @media (max-width: 999px) {
+      
+    }
+  }
+
+  .header__bgr-menu {
+    display: none;
+
+    @media (max-width: 999px) {
+      display: block;
+    }
   }
 
   .designed {
+    width: 105px;
     font-family: Roboto;
     font-size: 16px;
     font-weight: 500;
@@ -165,6 +217,14 @@ header {
       cursor: pointer;
       color: $orange-hover;
     }
+      
+    @media (max-width: 999px) {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 999px) {
+    height: 34px;
   }
 }
 
@@ -180,6 +240,10 @@ main {
   background-image: url("../../../assets/images/panda.jpg");
   background-size: cover;
   background-position: center;
+
+  @media (max-width: 1599px) {
+    background-image: url("../../../assets/images/panda-donate-1000.jpg");
+  }
 }
 
 .feed {
@@ -193,7 +257,6 @@ main {
     @include flex(column, baseline);
     position: relative;
     height: 100%;
-    //padding: 41px 0 59px 0;
   }
 
   .feed__txt {
@@ -208,6 +271,11 @@ main {
       font-size: 16px;
       line-height: 140%;
       color: white;
+
+      @media (max-width: 1599px) {
+        margin: 30px 0 44px 0;
+        padding-right: 10px;
+      }
     }
 
     h3 {
@@ -215,6 +283,10 @@ main {
 
       &:nth-child(3n) {
         color: $orange-h2;
+      }
+
+      @media (max-width: 1599px) {
+        padding-right: 185px;
       }
     }
   }
@@ -240,11 +312,21 @@ main {
       line-height: 140%;
       color: $black-blue;
     }
+
+    @media (max-width: 1599px) {
+      top: 345px;
+      height: 918px;
+      padding: 20px 46px 46px 46px;
+    }
   }
   
   h4 {
     margin: 20px 0 60px 0;
     align-self: baseline;
+
+    @media (max-width: 1599px) {
+      margin: 10px 0 60px 0;
+    }
   }
 
   .feed-container__count {
@@ -312,6 +394,10 @@ main {
       font-size: 16px;
       line-height: 140%;
       color: black;
+
+      @media (max-width: 1599px) {
+        margin: 0 0 5px 20px;
+      }
     }
 
     .feed-range {
@@ -328,6 +414,11 @@ main {
         width: 915px;
         height: 2px;
         background: #72828E;
+
+        @media (max-width: 1599px) {
+          left: 13px;
+          width: 785px;
+        }
       }
 
       .feed-range__dott-container {
@@ -337,6 +428,12 @@ main {
         @include flex(row, space-between);
         width: 950px;
         height: 19px;
+
+        @media (max-width: 1599px) {
+          left: -5px;
+          width: 820px;
+        }
+
       }    
 
       .feed-range__dott {
@@ -357,7 +454,14 @@ main {
           border-radius: 50%;
           background: #FFEE2E;
         }
-        
+                
+        &:nth-child(1) {
+          display: none;
+        }
+      }
+
+      @media (max-width: 1599px) {
+        width: 810px;
       }
     }
 
@@ -381,7 +485,17 @@ main {
           text-transform: uppercase;  
           color: $black-blue;
         }      
+
+        &:nth-child(1) {
+          display: none;
+        }
       }
+
+      
+    }
+
+    @media (max-width: 1599px) {
+      align-items: center;
     }
   }
 
@@ -456,11 +570,11 @@ main {
       color: $black-blue;
     }
   }
+
+  @media (max-width: 1599px) {
+    height: 1333px;
+  }
 }
-
-
-
-
 
 footer {
   background-color: #111115;
@@ -474,11 +588,44 @@ footer {
                          "social footer-nav author";
     grid-template-columns: 299px calc(100% - 667px) 368px;
     grid-template-rows: 85px 1fr 135px;
+
+    @media (max-width: 1599px) {
+      grid-template-columns: 299px calc(100% - 599px) 300px;
+    }
+
+    @media (max-width: 999px) {
+      height: 282px;
+      grid-template-areas: "logo . social"
+                            "donate-btn donate-btn social"
+                            "footer-nav footer-nav author";
+      grid-template-rows: 85px calc(100% - (85px + 55px)) 55px;
+      grid-template-columns: 299px calc(100% - 529px) 230px;
+      padding: 12px 0;
+    }
+
+    @media (max-width: 639px) {
+      @include flex(column, baseline);
+      height: 320px;
+      padding: 20px 10px 0 10px;
+    }
   }
 
   .logo {
     @include logo;
     grid-area: logo;
+
+    @media (max-width: 639px) {
+      width: 128px;
+      height: 23px;
+      margin-right: 0;
+      border: none;
+    }
+
+    .bamboo {
+      @media (max-width: 639px) {
+        left: 70px;
+      }
+    }
   }
 
   .subscribe-form {
@@ -548,12 +695,30 @@ footer {
         color: $green;
       }
     }
+
+    @media (max-width: 1599px) {
+      width: 366px;
+      margin-right: 34px;
+    }
+
+    @media (max-width: 999px) {
+      display: none;
+    }
   }
 
   .txt-btn {
     align-self: center;
     grid-area: donate-btn;
     border-radius: 5px;
+
+    @media (max-width: 999px) {
+      align-self: baseline;
+    }
+
+    @media (max-width: 639px) {
+      align-self: center;
+      margin-bottom: 30px;
+    }
   }
 
   .socials-container {
@@ -588,6 +753,10 @@ footer {
           margin-right: 12px;
           background: rgba(196, 196, 196, 0.5);
           border-radius: 50%;
+
+          @media (max-width: 999px) {
+            margin-right: 0;
+          }
         }
 
         p {
@@ -597,8 +766,34 @@ footer {
           font-size: 16px;
           line-height: 140%;
           color: white;
+
+          @media (max-width: 999px) {
+            display: none;
+          }
+        }
+
+        @media (max-width: 639px) {
+          width: 26px;
+          justify-content: center;
         }
       }
+
+      @media (max-width: 639px) {
+        flex-direction: row;
+      }
+    }
+
+    @media (max-width: 999px) {
+      justify-self: end;
+      width: 26px;
+      height: 163px;
+    }
+
+    @media (max-width: 639px) {
+      justify-self: center;
+      width: 194px;
+      height: 26px;
+      margin: 30px 0;
     }
   }
 
@@ -635,6 +830,22 @@ footer {
         color: $orange;
       }
     }
+
+    @media (max-width: 1599px) {
+      width: 333px;
+      margin-right: 5px;
+    }
+
+    @media (max-width: 999px) {
+      justify-self: baseline;
+      margin-right: 0;
+      width: 299px;
+    }
+
+    @media (max-width: 639px) {
+      width: 100%;
+      margin-top: 28px;
+    }
   }
 
   .author-data {
@@ -652,6 +863,15 @@ footer {
       font-size: 16px;
       line-height: 130%;
       color: white;
+
+      @media (max-width: 639px) {
+        font-size: 15px;
+        line-height: 120%;
+      }
+    }
+
+    @media (max-width: 639px) {
+      align-items: flex-end;
     }
   }
 }
