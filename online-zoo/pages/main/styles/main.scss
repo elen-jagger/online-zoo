@@ -965,7 +965,7 @@ header {
     @media (max-width: 999px) {
       position: relative;
       margin-bottom: 40px;
-      padding: 0 12px;
+      padding: 0;
     }
 
     @media (max-width: 639px) {
@@ -1066,12 +1066,32 @@ header {
 
   h3 {
     margin-bottom: 47px;
+
+    @media (max-width: 1599px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 639px) {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
   }
 
   .testimonials-cards-container {
     @include flex(row, space-between);
     width: 100%;
     height: 391px;
+
+    @media (max-width: 1599px) {
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+
+    @media (max-width: 999px) {
+      @include flex(column, space-between);
+      width: 100%;
+      height: 357px;
+    }
   }
 
   .testimonials-card__gradient {
@@ -1080,6 +1100,15 @@ header {
     padding: 2px;
     background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     border-radius: 20px;
+
+    @media (max-width: 1599px) {
+      width: 294px;
+    }
+
+    @media (max-width: 999px) {
+      width: 100%;
+      height: 109px;
+    }
   }
 
   .testimonials-card {
@@ -1088,12 +1117,29 @@ header {
     padding: 15px 15px 19px 15px;
     background-color: $light-gray;
     border-radius: 20px;
+
+    @media (max-width: 1599px) {
+      padding: 11px 15px 16px 15px;
+    }
+
+    @media (max-width: 999px) {
+      padding: 13px 15px 10px 10px;
+    }
+
+    @media (max-width: 639px) {
+      padding: 7px 15px 8px 13px;
+    }
   }
 
   .testimonials-card__content {
     width: 100%;
     height: 309px;
     overflow: hidden;
+
+    @media (max-width: 999px) {
+      padding-left: 5px;
+      height: 38px;
+    }
   }
 
   p {
@@ -1110,6 +1156,10 @@ header {
     width: 100%;
     height: 37px;
     margin-bottom: 10px;
+
+    @media (max-width: 999px) {
+      // height: 49px;
+    }
   }
 
   .testimonials-card__img {
@@ -1151,6 +1201,20 @@ header {
     padding: 0.5px;
     background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     border-radius: 5px;
+
+    @media (max-width: 1599px) {
+      width: 41.5%;
+      max-width: 390px;
+      margin: 21px 0 50px 0;
+    }
+
+    @media (max-width: 999px) {
+      margin: 21px 0 10px 0;
+    }
+
+    @media (max-width: 639px) {
+      display: none;
+    }
   }
 
   // .progress-bar for input {
@@ -1172,6 +1236,15 @@ header {
   button {
     align-self: baseline;
     border-radius: 5px;
+
+    @media (max-width: 999px) {
+      width: 240px;
+      align-self: center;
+    }
+
+    @media (max-width: 639px) {
+      margin-top: 28px;
+    }
   }
 
   .progress-bar {
@@ -1196,8 +1269,47 @@ header {
 
   .testimonials__bg-img {
     position: absolute;
-    bottom: -133px;
+    bottom: 0;
     right: 0;
+    width: 300.92px;
+    height: 295.45px;
+    background-image: url("../../../assets/images/testimonials-img-1600.jpg");
+    background-repeat: no-repeat;
+    background-size: 82%;
+    background-position: 55px 21px;
+
+    @media (max-width: 1599px) {
+      width: 239.98px;
+      height: 235.62px;
+      background-image: url("../../../assets/images/testimonials-img-1000.jpg");
+      background-position: 42px -6px;
+    }
+
+    @media (max-width: 999px) {
+      width: 149.88px;
+      height: 147.15px;
+      background-position: 35px 12px;
+    }
+
+    @media (max-width: 639px) {
+      width: 77.21px;
+      height: 75.81px;
+      background-image: url("../../../assets/images/testimonials-img-320.jpg");
+      background-position: 40px 17px;
+      background-size: 47%;
+    }
+  }
+
+  @media (max-width: 1599px) {
+    padding: 100px 0 142px 0;
+  }
+
+  @media (max-width: 999px) {
+    padding: 60px 0 82px 0;
+  }
+
+  @media (max-width: 639px) {
+    padding: 30px 0 60px 0;
   }
 }
 
