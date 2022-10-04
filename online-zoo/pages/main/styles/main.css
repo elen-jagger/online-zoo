@@ -315,6 +315,18 @@ header .designed:hover {
   }
 }
 
+@media (max-width: 999px) {
+  main {
+    padding-top: 34px;
+  }
+}
+
+@media (max-width: 639px) {
+  main {
+    padding-top: 4px;
+  }
+}
+
 .watch {
   height: 700px;
   width: 100%;
@@ -503,6 +515,7 @@ header .designed:hover {
 
 @media (max-width: 639px) {
   .watch {
+    margin-top: 30px;
     height: 187px;
     background-image: url("../../../assets/images/panda-320.jpg");
   }

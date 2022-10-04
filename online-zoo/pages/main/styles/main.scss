@@ -251,6 +251,15 @@ header {
   }
 }
 
+main {
+  @media (max-width: 999px) {
+    padding-top: 34px;
+  }
+  
+  @media (max-width: 639px) {
+    padding-top: 4px;
+  }
+}
 
 .watch {  
   height: 700px;
@@ -380,12 +389,13 @@ header {
     background-image: url("../../../assets/images/panda-1000.jpg");
   }
 
-  @media (max-width: 999px) {
+  @media (max-width: 999px) {    
     height: 339px;
     background-image: url("../../../assets/images/panda-640.jpg");
   }
 
   @media (max-width: 639px) {
+    margin-top: 30px;
     height: 187px;
     background-image: url("../../../assets/images/panda-320.jpg");
   }

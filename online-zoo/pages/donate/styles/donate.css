@@ -296,6 +296,12 @@ main {
   background-color: #F9804B;
 }
 
+@media (max-width: 999px) {
+  main {
+    padding-top: 34px;
+  }
+}
+
 .watch {
   height: 390px;
   width: 100%;
