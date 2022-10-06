@@ -160,13 +160,34 @@ header {
 
     .menu {
       @include menu;
+      height: 100%;
 
       @media (max-width: 999px) {
-        display: none;
+        flex-direction: column;
+        position: fixed;
+        right: -2000px;
+        top: 0;
+        z-index: 2;
+        width: 100vw;
+        height: 329px;
+        padding: 10px 10px 40px 10px;
+        background-color: white;
+        color: $black-blue;   
+        transition: 0.5s ease-in-out; 
       }
     }
 
-    .menu__item{
+    .menu__open {
+      position: absolute;
+      top: 0;
+      left: 0;
+      align-items: flex-start;
+      transition: 0.5s ease-in-out;
+    }
+
+    
+    .menu__item {
+
       font-family: Roboto;
       font-size: 16px;
       font-weight: 500;
@@ -175,6 +196,10 @@ header {
 
       &:hover {
         @include menu-hover;
+      }
+
+      @media (max-width: 999px) {
+        color: $black-blue;
       }
     }
 
@@ -192,18 +217,92 @@ header {
       margin-left: -260px;
     }
 
-    @media (max-width: 999px) {
-      
-    }
   }
 
-  .header__bgr-menu {
+  .header__bgr-icon {
     display: none;
+    position: fixed;
+    right: 0;
+    z-index: 5;    
+    width: 33px;
+    height: 33px;
+    background-image: url("../../../assets/icons/burger-menu.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
 
     @media (max-width: 999px) {
       display: block;
     }
   }
+
+  .header__bgr-icon_open {
+    background-image: url("../../../assets/icons/close-menu.svg");
+  }
+
+  .menu__bgr-logo {
+    display: none;
+
+    @media (max-width: 998px) {
+      display: block;
+      width: 65.6px;
+      height: 41.6px;
+      margin-bottom: 15px;
+      border: 1px solid $orange-h2;
+      border-radius: 2px;
+    }
+    
+  }
+
+  .header__bgr-logo {   
+    h1 {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15.2116px;
+      line-height: 120%;
+      text-align: center;
+      color: $orange-h2;
+    }
+
+    .bamboo {
+      position: relative;
+      left: 7px;
+      bottom: 20px;
+      background-image: url("../../../assets/icons/bamboo-orange.svg");
+    }
+  }
+
+  .header__bgr-designed {
+    a {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: $black-blue;
+    }    
+
+    display: none;
+
+    @media (max-width: 998px) {
+      display: block;
+    }
+  }
+
+  .header__shadow {
+    display: none;
+  }
+
+  .header__shadow_open {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(41, 41, 41, 0.6);
+  }
+
 
   .designed {
     width: 105px;
