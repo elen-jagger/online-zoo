@@ -243,8 +243,33 @@ header .header-nav .menu {
 
 @media (max-width: 999px) {
   header .header-nav .menu {
-    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
+    right: -2000px;
+    top: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 329px;
+    padding: 10px 10px 40px 10px;
+    background-color: white;
+    color: #333B41;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
   }
+}
+
+header .header-nav .menu__open {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 header .header-nav .menu__item {
@@ -258,6 +283,12 @@ header .header-nav .menu__item {
 header .header-nav .menu__item:hover {
   cursor: pointer;
   color: #FED290;
+}
+
+@media (max-width: 999px) {
+  header .header-nav .menu__item {
+    color: #333B41;
+  }
 }
 
 header .header-nav .menu__item_active {
@@ -276,14 +307,87 @@ header .header-nav .menu__item_active:hover {
   }
 }
 
-header .header__bgr-menu {
+header .header__bgr-icon {
   display: none;
+  position: fixed;
+  right: 0;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 33px;
+  height: 33px;
+  background-image: url("../../../assets/icons/burger-menu.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
 }
 
 @media (max-width: 999px) {
-  header .header__bgr-menu {
+  header .header__bgr-icon {
     display: block;
   }
+}
+
+header .header__bgr-icon_open {
+  background-image: url("../../../assets/icons/close-menu.svg");
+}
+
+header .menu__bgr-logo {
+  width: 65.6px;
+  height: 41.6px;
+  margin-bottom: 15px;
+  border: 1px solid #FE9013;
+  border-radius: 2px;
+}
+
+header .header__bgr-logo h1 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.2116px;
+  line-height: 120%;
+  text-align: center;
+  color: #FE9013;
+}
+
+header .header__bgr-logo .bamboo {
+  position: relative;
+  left: 7px;
+  bottom: 20px;
+  background-image: url("../../../assets/icons/bamboo-orange.svg");
+}
+
+header .header__bgr-designed a {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #333B41;
+}
+
+header .header__shadow {
+  display: none;
+}
+
+header .header__shadow_open {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(41, 41, 41, 0.6);
 }
 
 header .designed {
