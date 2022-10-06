@@ -180,6 +180,7 @@ header {
 
     .menu {
       @include menu;
+      height: 100%;
 
       @media (max-width: 999px) {
         flex-direction: column;
@@ -194,6 +195,14 @@ header {
         color: $black-blue;   
         transition: 0.5s ease-in-out; 
       }
+
+      // :nth-child(1) {
+      //   display: none;
+      // }
+
+      // :nth-child(7) {
+      //   display: none;
+      // }
     }
 
     .menu__open {
@@ -206,6 +215,7 @@ header {
 
     
     .menu__item {
+
       font-family: Roboto;
       font-size: 16px;
       font-weight: 500;
@@ -235,17 +245,13 @@ header {
       margin-left: -260px;
     }
 
-    @media (max-width: 999px) {
-      
-    }
   }
 
   .header__bgr-icon {
     display: none;
     position: fixed;
     right: 0;
-    z-index: 5;
-    @include flex(row, center);
+    z-index: 5;    
     width: 33px;
     height: 33px;
     background-image: url("../../../assets/icons/burger-menu.svg");
@@ -262,11 +268,17 @@ header {
   }
 
   .menu__bgr-logo {
-    width: 65.6px;
-    height: 41.6px;
-    margin-bottom: 15px;
-    border: 1px solid $orange-h2;
-    border-radius: 2px;
+    display: none;
+
+    @media (max-width: 998px) {
+      display: block;
+      width: 65.6px;
+      height: 41.6px;
+      margin-bottom: 15px;
+      border: 1px solid $orange-h2;
+      border-radius: 2px;
+    }
+    
   }
 
   .header__bgr-logo {   
@@ -291,12 +303,18 @@ header {
   .header__bgr-designed {
     a {
       font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 140%;
-    color: $black-blue;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: $black-blue;
     }    
+
+    display: none;
+
+    @media (max-width: 998px) {
+      display: block;
+    }
   }
 
   .header__shadow {

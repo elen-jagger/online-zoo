@@ -239,6 +239,7 @@ header .header-nav .menu {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 999px) {
@@ -312,19 +313,6 @@ header .header__bgr-icon {
   position: fixed;
   right: 0;
   z-index: 5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 33px;
   height: 33px;
   background-image: url("../../../assets/icons/burger-menu.svg");
@@ -343,11 +331,18 @@ header .header__bgr-icon_open {
 }
 
 header .menu__bgr-logo {
-  width: 65.6px;
-  height: 41.6px;
-  margin-bottom: 15px;
-  border: 1px solid #FE9013;
-  border-radius: 2px;
+  display: none;
+}
+
+@media (max-width: 998px) {
+  header .menu__bgr-logo {
+    display: block;
+    width: 65.6px;
+    height: 41.6px;
+    margin-bottom: 15px;
+    border: 1px solid #FE9013;
+    border-radius: 2px;
+  }
 }
 
 header .header__bgr-logo h1 {
@@ -367,6 +362,10 @@ header .header__bgr-logo .bamboo {
   background-image: url("../../../assets/icons/bamboo-orange.svg");
 }
 
+header .header__bgr-designed {
+  display: none;
+}
+
 header .header__bgr-designed a {
   font-family: 'Roboto';
   font-style: normal;
@@ -374,6 +373,12 @@ header .header__bgr-designed a {
   font-size: 16px;
   line-height: 140%;
   color: #333B41;
+}
+
+@media (max-width: 998px) {
+  header .header__bgr-designed {
+    display: block;
+  }
 }
 
 header .header__shadow {
