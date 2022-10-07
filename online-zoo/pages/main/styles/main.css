@@ -1598,6 +1598,7 @@ header .designed:hover {
 }
 
 .testimonials .testimonials-cards-container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1896,6 +1897,86 @@ header .designed:hover {
     background-position: 40px 17px;
     background-size: 47%;
   }
+}
+
+.testimonials .popup__close-btn {
+  position: absolute;
+  top: 3%;
+  right: 4%;
+  display: none;
+}
+
+.testimonials .testimonials-popup {
+  position: relative;
+  display: none;
+  padding: 20px 36px 17px 17px;
+  background-color: #F5F7F6;
+}
+
+.testimonials .testimonials-popup_open {
+  display: block;
+  position: fixed;
+  z-index: 5;
+  top: 22%;
+  left: 33%;
+}
+
+@media (max-width: 640px) {
+  .testimonials .testimonials-popup_open {
+    left: 25%;
+  }
+}
+
+@media (max-width: 520px) {
+  .testimonials .testimonials-popup_open {
+    left: 20%;
+  }
+}
+
+@media (max-width: 420px) {
+  .testimonials .testimonials-popup_open {
+    left: 10%;
+  }
+}
+
+@media (max-width: 370px) {
+  .testimonials .testimonials-popup_open {
+    left: 3%;
+  }
+}
+
+@media (max-width: 330px) {
+  .testimonials .testimonials-popup_open {
+    left: 0;
+  }
+}
+
+.testimonials .testimonials-popup_open .popup__close-btn {
+  display: block;
+}
+
+.testimonials .testimonials-popup_open .testimonials-card__gradient {
+  width: 267px;
+  height: 391px;
+}
+
+.testimonials .testimonials-popup_open .testimonials-card__content {
+  height: 320px;
+}
+
+.testimonials .testimonials__shadow {
+  display: none;
+}
+
+.testimonials .testimonials__shadow_open {
+  display: block;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(41, 41, 41, 0.6);
 }
 
 @media (max-width: 1599px) {
