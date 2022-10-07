@@ -66,53 +66,55 @@
             <div class="feed-range">
               <div class="feed-range__line"></div>
               <ul class="feed-range__dott-container">
-                <li class="feed-range__dott"><div class="yellow-dott"></div></li>
-                <li class="feed-range__dott"><div class="yellow-dott"></div></li>
-                <li class="feed-range__dott"><div class="yellow-dott"></div></li>
-                <li class="feed-range__dott"><div class="yellow-dott"></div></li>
-                <li class="feed-range__dott"><div class="yellow-dott"></div></li>
-                <li class="feed-range__dott"><div class="yellow-dott"></div></li>
-                <li class="feed-range__dott"><div class="yellow-dott"></div></li>
-                <li class="feed-range__dott"><div class="yellow-dott"></div></li>
+                <li class="feed-range__dott" data-value="5000" data-amount="fiveK"><div class="yellow-dott"></div></li>
+                <li class="feed-range__dott" data-value="2000" data-amount="twoK"><div class="yellow-dott"></div></li>
+                <li class="feed-range__dott" data-value="1000" data-amount="oneK"><div class="yellow-dott"></div></li>
+                <li class="feed-range__dott" data-value="500" data-amount="fiveH"><div class="yellow-dott"></div></li>
+                <li class="feed-range__dott" data-value="250" data-amount="twoH"><div class="yellow-dott"></div></li>
+                <li class="feed-range__dott feed-range__dott_active" data-value="100" data-amount="hundreed"><div class="yellow-dott"></div></li>
+                <li class="feed-range__dott" data-value="50" data-amount="fifty"><div class="yellow-dott"></div></li>
+                <li class="feed-range__dott" data-value="25" data-amount="twenty"><div class="yellow-dott"></div></li>
               </ul>
             </div>
             <ul class="feed-range-values">
-              <li class="range-value">
+              <li class="range-value fiveK">
                 <img src="../../assets/icons/dollar_black.svg" alt="dollar">
-                <p>5000</p>
+                <p class="5000">5000</p>
               </li>
-              <li class="range-value">
+              <li class="range-value twoK">
                 <img src="../../assets/icons/dollar_black.svg" alt="dollar">
-                <p>2000</p>
+                <p class="2000">2000</p>
               </li>
-              <li class="range-value">
+              <li class="range-value oneK">
                 <img src="../../assets/icons/dollar_black.svg" alt="dollar">
-                <p>1000</p>
+                <p class="hudreed">1000</p>
               </li>
-              <li class="range-value">
+              <li class="range-value fiveH">
                 <img src="../../assets/icons/dollar_black.svg" alt="dollar">
-                <p>500</p>
+                <p class="500">500</p>
               </li>
-              <li class="range-value">
+              <li class="range-value twoH">
                 <img src="../../assets/icons/dollar_black.svg" alt="dollar">
-                <p>250</p>
+                <p class="250">250</p>
               </li>
-              <li class="range-value">
+              <li class="range-value hundreed feed__active-txt">
                 <img src="../../assets/icons/dollar_black.svg" alt="dollar">
-                <p>100</p>
+                <p class="100">100</p>
               </li>
-              <li class="range-value">
+              <li class="range-value fifty">
                 <img src="../../assets/icons/dollar_black.svg" alt="dollar">
-                <p>50</p>
+                <p class="50">50</p>
               </li>
-              <li class="range-value">
+              <li class="range-value twenty">
                 <img src="../../assets/icons/dollar_black.svg" alt="dollar">
-                <p>25</p>
+                <p class="25">25</p>
               </li>
             </ul>
           </div>
           <div class="another-amount">
-            <input type="number" placeholder="Another amount" class="another-amount__input">
+            <form action="">
+              <input type="text" maxlength="4" value="100" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" class="another-amount__input" required>
+            </form>            
             <img src="../../assets/icons/dollar.svg" alt="dollar" class="dollar">
           </div>
           <form class="monthly-once">

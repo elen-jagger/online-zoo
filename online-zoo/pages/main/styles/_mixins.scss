@@ -29,14 +29,6 @@
   }
 }
 
-@mixin h3 {
-  // color: #000;
-
-  @media (max-width: 767px) {
-    // color: #000;
-  }
-}
-
 @mixin menu-hover {
   cursor: pointer;
   color: #FED290;

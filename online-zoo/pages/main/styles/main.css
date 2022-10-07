@@ -1788,35 +1788,72 @@ header .designed:hover {
   margin: 0 5px;
 }
 
-.testimonials .progress-bar__gradient {
-  position: relative;
-  width: 52%;
-  max-width: 599px;
-  height: 8px;
-  margin: 21px 0 31px 0;
-  padding: 0.5px;
-  background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
-  border-radius: 5px;
+.testimonials .progress-bar__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 60px;
 }
 
-@media (max-width: 1599px) {
-  .testimonials .progress-bar__gradient {
-    width: 41.5%;
-    max-width: 390px;
-    margin: 21px 0 50px 0;
+@media (max-width: 1000px) {
+  .testimonials .progress-bar__container {
+    height: 50px;
+    margin-bottom: 30px;
   }
 }
 
 @media (max-width: 999px) {
-  .testimonials .progress-bar__gradient {
-    margin: 21px 0 10px 0;
+  .testimonials .progress-bar__container {
+    display: none;
   }
 }
 
-@media (max-width: 639px) {
-  .testimonials .progress-bar__gradient {
-    display: none;
+.testimonials .testimonials__progress-bar {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 52%;
+  height: 8px;
+  background: #F5F7F6;
+  outline: none;
+  opacity: 0.7;
+  border-radius: 5px;
+  border: 0.5px solid #F3A9F8;
+}
+
+@media (max-width: 1000px) {
+  .testimonials .testimonials__progress-bar {
+    width: 42%;
   }
+}
+
+.testimonials .testimonials__progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12.5%;
+  height: 6px;
+  background: #FE9013;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.testimonials .testimonials__progress-bar::-moz-range-thumb {
+  width: 12.5%;
+  height: 6px;
+  background: #FE9013;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .testimonials button {
@@ -1831,6 +1868,7 @@ header .designed:hover {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    margin-top: 39px;
   }
 }
 

@@ -910,12 +910,6 @@ main {
   background-image: none;
 }
 
-.feed .feed-range-container .feed-range .feed-range__dott:hover {
-  cursor: pointer;
-  background-image: url(../../../assets/icons/roller_icon.svg);
-  background-size: contain;
-}
-
 .feed .feed-range-container .feed-range .feed-range__dott .yellow-dott {
   width: 10px;
   height: 10px;
@@ -942,28 +936,9 @@ main {
   }
 }
 
-@media (max-width: 1599px) {
-  .feed .feed-range-container .feed-range .feed-range__dott:nth-child(3) {
-    cursor: pointer;
-    background-image: url(../../../assets/icons/roller_icon.svg);
-    background-size: contain;
-  }
-}
-
-@media (max-width: 999px) {
-  .feed .feed-range-container .feed-range .feed-range__dott:nth-child(6) {
-    cursor: pointer;
-    background-image: url(../../../assets/icons/roller_icon.svg);
-    background-size: contain;
-  }
-}
-
-@media (max-width: 639px) {
-  .feed .feed-range-container .feed-range .feed-range__dott:nth-child(6) {
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: 10px;
-  }
+.feed .feed-range-container .feed-range .feed-range__dott_active {
+  background-image: url(../../../assets/icons/roller_icon.svg);
+  background-size: contain;
 }
 
 @media (max-width: 1599px) {
@@ -1073,6 +1048,11 @@ main {
   }
 }
 
+.feed .feed-range-container .feed__active-txt {
+  -webkit-filter: brightness(0) saturate(100%) invert(69%) sepia(30%) saturate(6913%) hue-rotate(351deg) brightness(107%) contrast(99%);
+          filter: brightness(0) saturate(100%) invert(69%) sepia(30%) saturate(6913%) hue-rotate(351deg) brightness(107%) contrast(99%);
+}
+
 @media (max-width: 1599px) {
   .feed .feed-range-container {
     -webkit-box-align: center;
@@ -1110,11 +1090,16 @@ main {
   margin: 0;
 }
 
-.feed .another-amount input[type=number] {
+.feed .another-amount form {
+  width: 100%;
+  height: 100%;
+}
+
+.feed .another-amount form input[type=number] {
   -moz-appearance: textfield;
 }
 
-.feed .another-amount input {
+.feed .another-amount form input {
   width: 100%;
   height: 100%;
   padding-left: 9px;
@@ -1128,7 +1113,7 @@ main {
 }
 
 @media (max-width: 999px) {
-  .feed .another-amount input {
+  .feed .another-amount form input {
     padding-left: 5px;
   }
 }
