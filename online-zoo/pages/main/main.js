@@ -23,6 +23,8 @@ headerShadow.addEventListener('click', closeMenu);
 
 
 // Pets slider
+let isActiveTransition = false;
+const fadeTime = 1600;
 const leftBtn = document.querySelector('.pets__btn_left');
 const rightBtn = document.querySelector('.pets__btn_right');
 const slidesContainer = document.querySelectorAll('.pets__slide');
@@ -31,7 +33,10 @@ let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
+  if (isActiveTransition) return;
+  isActiveTransition = true;
   showSlides(slideIndex += n);
+  setTimeout(() => isActiveTransition = false, fadeTime);
 }
 
 function showSlides(n) {
