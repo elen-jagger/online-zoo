@@ -56,3 +56,38 @@ cards.forEach((el) => el.addEventListener('click', popupOpen));
 
 popupCloseBtn.forEach((el) => el.addEventListener('click', popupClose));
 testimonialsShadow.addEventListener('click', shadowPopupClose)
+
+// Pets slider
+const leftBtn = document.querySelector('.pets__btn_left');
+const rightBtn = document.querySelector('.pets__btn_right');
+const slidesContainer = document.querySelectorAll('.pets__slide');
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  let i;
+  if( n > slidesContainer.length ) {slideIndex = 1}
+  if( n < 1 ) {slideIndex = slidesContainer.length}
+
+  for( i = 0; i < slidesContainer.length; i++ ) {
+    slidesContainer[i].style.display = "none";
+  }
+//Randomizing cards
+  let slide = slidesContainer[slideIndex-1].querySelectorAll('.pets-card-gradient');
+  let orders = [0, 1, 2, 3, 4, 5];
+  orders.sort(() => 0.5 - Math.random());
+
+  for( i = 0; i < slide.length; i++ ) {
+    slide[i].style.order = orders[i];
+  }  
+//
+  slidesContainer[slideIndex-1].style.display = "flex";
+}
+
+leftBtn.addEventListener('click', () => plusSlides(-1));
+rightBtn.addEventListener('click', () => plusSlides(1));
