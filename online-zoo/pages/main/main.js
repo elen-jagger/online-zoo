@@ -24,7 +24,7 @@ headerShadow.addEventListener('click', closeMenu);
 
 // Pets slider
 let isActiveTransition = false;
-const fadeTime = 1600;
+const fadeTime = 1100;
 const leftBtn = document.querySelector('.pets__btn_left');
 const rightBtn = document.querySelector('.pets__btn_right');
 const slidesContainer = document.querySelectorAll('.pets__slide');
