@@ -55,18 +55,22 @@ function setAmount(e) {
 function setDott() {
   const amountInput = document.querySelector('.another-amount__input');
   const value = amountInput.value;
-  
+  let oldDott = document.querySelector('.feed-range__dott_active');
+  oldDott.classList.remove('feed-range__dott_active');
+  let oldTxt = document.querySelector('.feed__active-txt');
+  oldTxt.classList.remove('feed__active-txt');
+
   dotts.forEach((el) => {
     let dottValue = Number(el.dataset.value);
+    
     if( dottValue == value) {
       
-      let oldDott = document.querySelector('.feed-range__dott_active');
-      oldDott.classList.remove('feed-range__dott_active');
+      // let oldDott = document.querySelector('.feed-range__dott_active');
+      // oldDott.classList.remove('feed-range__dott_active');
       el.classList.add('feed-range__dott_active');
 
       let txtClass = el.dataset.amount;
-      let oldTxt = document.querySelector('.feed__active-txt');
-      oldTxt.classList.remove('feed__active-txt');
+      
       let newTxt = document.querySelector(`.${txtClass}`);
       newTxt.classList.add('feed__active-txt');
     }
